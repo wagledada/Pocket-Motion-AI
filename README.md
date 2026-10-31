@@ -1,31 +1,59 @@
 # Pocket Motion AI
 
-A small engineering and AI project that uses smartphone accelerometer data to classify three motions:
+A beginner engineering and AI project that uses a small neural network to classify motion patterns.
 
-- Still
-- Shaking
-- Circular movement
+## Current results
 
-## Project goals
+The first model was trained on synthetic motion data with three classes:
 
-- Collect motion data with a smartphone
-- Train a small neural network to recognize motion patterns
-- Compare the neural network with a simple C++ rule-based classifier
-- Design a simple phone holder in SolidWorks
-- Practice Git and GitHub through a complete project
+- `0` — Still
+- `1` — Shaking
+- `2` — Circular motion
 
-## Status
+Test result:
 
-Project started. Data collection and model development are next.
+- Test accuracy: approximately **90%**
+- Test loss: approximately **0.77**
 
-## Tools
+The test set contained 60 examples, so the model classified about 54 correctly.
 
-- Python and Keras
+## What I learned
+
+- Python and NumPy arrays
+- Creating and visualizing data with Matplotlib
+- Splitting data into training and testing sets
+- Building a neural network with TensorFlow/Keras
+- Training and evaluating a classification model
+- Uploading notebooks and data to GitHub
+- Basic SolidWorks part design
+
+## Project structure
+
+```text
+pocket-motion-ai/
+├── notebooks/
+│   └── pocket_motion_ai.ipynb
+├── data/
+│   └── synthetic_motion_data.csv
+├── solidworks/
+│   └── phone_holder.SLDPRT
+└── README.md
+```
+
+## Tools used
+
+- Python
+- NumPy
+- Matplotlib
+- TensorFlow/Keras
 - Google Colab
-- C++
+- GitHub
 - SolidWorks
-- Git and GitHub
 
-## Disclaimer
+## Important note
 
-This is an educational prototype. It is not intended for safety-critical decisions.
+The current model uses synthetic data for learning. It is not yet a reliable real-world phone-motion detector. The next improvement is to collect real accelerometer data and compare the neural network with a simple rule-based C++ classifier.
+
+## Project status
+
+First neural-network experiment completed. Real sensor-data collection and model improvement are planned next.
